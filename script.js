@@ -4,33 +4,46 @@ $("#currentDay").text(date)
 
 
 // Create a function to check the time and set the display colors
-var checkTime = function() {
-// Get current time
-var currentTime = moment().format('H')
-console.log(currentTime)
+var checkTime = function () {
+    // Get current time
+    var currentTime = moment().format('H')
+    console.log(currentTime)
 
-// Get all elements with tag textarea
-var textareaEl = $("textarea")
+    $("textarea").each(function (index) {
 
-// loop through to get index
-for (var i=0; i < textareaEl.length; i++) {
+        // set a variable to capture the id from each textarea
+        var boxtime = $(this).attr("id")
 
-// grab each tag's id
-var timeOfDayId = textareaEl[i].id;
+        // These if statement checks current time and compares it to the id captured above
+        if (boxtime < currentTime) {
+            $(this).addClass("past")
+        }
+        else if (boxtime > currentTime) {
+            $(this).addClass("future")
+        }
+        else {
+            $(this).addClass("present")
+        }
 
-var manipID = document.getElementById(textareaEl[i].id)
+    });
 
-console.log(manipID)
-
-if (timeOfDayId < currentTime) {
-    $(textareaEl[i].id).addClass("past")
-} else if (timeOfDayId > currentTime) {
-    $(textareaEl[i].id).addClass("future")
-} else {
-    $(textareaEl[i].id).addClass("present")
 }
-
-    
-}}
-
 checkTime()
+
+// create click eventListener
+$(".saveBtn").click(function () {
+
+    // create variable toDo to capture text from textarea
+    var toDO = $("textarea").val()
+    console.log(this)
+
+
+
+
+})
+
+// Grab the text from each textarea and save it local storage when the button is pushed
+
+this.previousElementSibling
+
+// event delegation: FYI project
