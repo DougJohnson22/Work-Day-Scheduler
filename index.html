@@ -1,170 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <p class="lead">A simple calendar app for scheduling your work day</p>
+        <p id="currentDay" class="lead"></p>
     </header>
 
     <div class="container">
-      <!-- Timeblocks go here -->
-      <div class="row">
-          <div class="hour">9am</div>
+<!-- ----------------------------------------->
+        <div class="row">
 
-          <div class="col-10" id="9am">
+            <div class="hour col-1">9am</div>
 
-          </div>
+            <div class="col-10 time-block" id="9am">
 
-          <button class="saveBtn">
-            <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+                <form action="input">
 
-          </button>
+                </form>
 
-      </div>
+            </div>
 
-      <div class="row">
-          <div class="hour">10am</div>
+            <button class="saveBtn col-1">
+                <img src="saveBtn.png" alt="save-icon" id="saveIcon">
 
-          <div class="col-10" id="10am">
+            </button>
 
-          </div>
+        </div>
+<!-- ----------------------------------------->
+        <div class="row">
 
-          <button class="saveBtn">
-            <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+            <div class="hour col-1">10am</div>
 
-          </button>
+            <div class="col-10 time-block" id="10am">
 
-      </div>
+                <form action="input">
 
-      <div class="row">
-          <div class="hour">11am</div>
+                </form>
 
-          <div class="col-10" id="11am">
+            </div>
 
-          </div>
+            <button class="saveBtn col-1">
 
-          <button class="saveBtn">
-            <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+                <img src="saveBtn.png" alt="save-icon" id="saveIcon">
 
-          </button>
+            </button>
 
-      </div>
+        </div>
+<!-- ----------------------------------------->
+        <div class="row">
 
-      <div class="row">
-          <div class="hour">12pm</div>
+            <div class="hour col-1">11am</div>
 
-          <div class="col-10" id="12pm">
+            <div class="col-10 time-block" id="11am">
 
-          </div>
+                <form action="input">
 
-          <button class="saveBtn">
-            <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+                </form>
 
-          </button>
+            </div>
 
-      </div>
+            <button class="saveBtn col-1">
 
-      <div class="row">
-          <div class="hour">1pm</div>
+                <img src="saveBtn.png" alt="save-icon" id="saveIcon">
 
-          <div class="col-10" id="1pm">
+            </button>
 
-          </div>
+        </div>
+<!-- ----------------------------------------->
+        <div class="row">
 
-          <button class="saveBtn">
-            <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+            <div class="hour col-1">12pm</div>
 
-          </button>
+            <div class="col-10 time-block" id="12pm">
 
-      </div>
+                <form action="input">
 
-      <div class="row">
-          <div class="hour">2pm</div>
+                </form>
 
-          <div class="col-10" id="2pm">
+            </div>
 
-          </div>
+            <button class="saveBtn col-1">
 
-          <button class="saveBtn">
-            <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+                <img src="saveBtn.png" alt="save-icon" id="saveIcon">
 
-          </button>
+            </button>
 
-      </div>
+        </div>
+<!-- ----------------------------------------->
+        <div class="row">
 
-      <div class="row">
-          <div class="hour">3pm</div>
+            <div class="hour col-1">1pm</div>
 
-          <div class="col-10" id="3pm">
+            <div class="col-10 time-block" id="1pm">
 
-          </div>
+                <form action="input">
 
-          <button class="saveBtn">
-            <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+                </form>
 
-          </button>
+            </div>
 
-      </div>
+            <button class="saveBtn col-1">
 
-      <div class="row">
-          <div class="hour">4pm</div>
+                <img src="saveBtn.png" alt="save-icon" id="saveIcon">
 
-          <div class="col-10" id="4pm">
+            </button>
 
-          </div>
+        </div>
+<!-- ----------------------------------------->
+        <div class="row">
 
-          <button class="saveBtn">
-            <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+            <div class="hour col-1">2pm</div>
 
-          </button>
+            <div class="col-10 time-block" id="2pm">
 
-      </div>
+                <form action="input">
 
-      <div class="row">
-          <div class="hour">5pm</div>
+                </form>
 
-          <div class="col-10" id="5pm">
+            </div>
 
-          </div>
+            <button class="saveBtn col-1">
 
-          <button class="saveBtn">
-              <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+                <img src="saveBtn.png" alt="save-icon" id="saveIcon">
 
-          </button>
+            </button>
 
-      </div>
-      
-      
-      
+        </div>
+<!-- ----------------------------------------->
+        <div class="row">
+
+            <div class="hour col-1">3pm</div>
+
+            <div class="col-10 time-block" id="3pm">
+
+                <form action="input">
+
+                </form>
+
+            </div>
+
+            <button class="saveBtn col-1">
+
+                <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+
+            </button>
+
+        </div>
+<!-- ----------------------------------------->
+        <div class="row">
+
+            <div class="hour col-1">4pm</div>
+
+            <div class="col-10 time-block" id="4pm">
+
+                <form action="input">
+
+                </form>
+
+            </div>
+
+            <button class="saveBtn col-1">
+
+                <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+
+            </button>
+
+        </div>
+<!-- ----------------------------------------->
+        <div class="row">
+
+            <div class="hour col-1">5pm
+
+            </div>
+
+            <div class="col-10 time-block" id="5pm">
+
+                <form action="input">
+
+                </form>
+
+            </div>
+
+            <button class="saveBtn col-1">
+
+                <img src="saveBtn.png" alt="save-icon" id="saveIcon">
+
+            </button>
+
+        </div>
+<!-- ----------------------------------------->
+
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 
 
 
