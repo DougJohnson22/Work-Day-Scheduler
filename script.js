@@ -1,3 +1,5 @@
+
+
 // create a function to use moment.js to insert the current date into the Headers
 var date = moment().format("dddd, MMM Do")
 $("#currentDay").text(date)
@@ -30,20 +32,29 @@ var checkTime = function () {
 }
 checkTime()
 
+
+
+// Create functions to read the textarea and then set to local storage when the save button is pressed and then get from local storage on refresh
+
 // create click eventListener
 $(".saveBtn").click(function () {
-
-    // create variable toDo to capture text from textarea
-    var toDO = $("textarea").val()
-    console.log(this)
-
-
-
-
+    localStorage.setItem("Task" + $(this).data("id"), ($(this).prev().val()))
 })
 
-// Grab the text from each textarea and save it local storage when the button is pushed
+// create a function to add a 0 to the number in the loop
+var numberFormat = function (num) {
+    if (num >= 10) {
+        return num
+    } return "0" + num
+}
 
-this.previousElementSibling
+// create a for loop to run through the local history and fill in text to the textarea with the same id number
+for (var i = 9; i < 18; i++) {
+    $("#" + numberFormat(i)).val(localStorage.getItem("Task" + numberFormat(i)))
 
-// event delegation: FYI project
+}
+
+// create a function to activate the hover feature when the icon is moused over
+var hoverEffect = $(".saveBtn").hover(handlerInOut)(function () {
+    $(this).attr("class", "i:hover")
+})
